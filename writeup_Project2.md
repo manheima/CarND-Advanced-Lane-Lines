@@ -130,12 +130,18 @@ I implemented this step in lines 59 through 62 in the section titled "Pipeline" 
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
+For the pipleine code to process the video, I averaged lane lines between frames to make it smoother. I also implemented a look ahead filter using the averaged line fit, instead of doing a sliding window from scratch every time.
+
 Here's a [link to my video result](test_videos_output/ProjectVideoOutput_final.mp4)
 
----s
+---
 
 ### Discussion
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+In this project I applied a variety of techniques that improved my lane fidning algorithm from the first project. I learned how to calibrate a camera, use color transforms and sobel gradients to create a binary image, apply a perspective transform to fit polynomial lines to define the lane. These techniques helped the algorithm be more robust to shadows and other noise in the images. 
+
+However, there are still changes I could make to improve the pipline. For isntance, the pipeline would not work well on hills as the perspective transform was defined on a flat plane. In addition, my algorthm was slow and took a long time to calculate the lane boundaries. If I were going to pursue this project further, I would spend mroe time improving the thresholds and making the pipeline more efficient to increase the processing speed. 
+
+
