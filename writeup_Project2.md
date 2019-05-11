@@ -24,8 +24,8 @@ The goals / steps of this project are the following:
 [image3]: output_images/CombinedSobels.png "Binary Example"
 [image4]: output_images/SourceAndWarpedImage.png "Warp Example"
 [image5]: output_images/WarpedBinaryWithFit.png "Fit Visual"
-[image6]: ./examples/example_output.jpg "Output"
-[video1]: ./project_video.mp4 "Video"
+[image6]: output_images/ProjectedLaneResult.png "Output"
+[video1]: test_videos_output/project_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -110,15 +110,17 @@ Below is an example of the second order line fits:
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I calculated teh radius of curvature in lines 364 through 367 in the "Helper functions" section. To calculate I used the equation:
+I calculated the radius of curvature in lines 364 through 367 in the "Helper functions" section. To calculate I used evaluated the following equation at the base of the image:
 
-$$E=mc^2$$
+R = ((1+(2Ay+B)^2))^1.5)/abs(2A)
 
+where A and B are defined by the 2nd order polynomial:
 
+f(y)=Ay^2+By+C
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+I implemented this step in lines 59 through 62 in the section titled "Pipeline" in the function `unwarp()`.  Here is an example of my result on a test image:
 
 ![alt text][image6]
 
@@ -128,9 +130,9 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](./test_videos_output/project_video.mp4)
 
----
+---s
 
 ### Discussion
 
