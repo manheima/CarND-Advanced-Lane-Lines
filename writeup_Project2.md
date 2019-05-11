@@ -25,7 +25,7 @@ The goals / steps of this project are the following:
 [image4]: output_images/SourceAndWarpedImage.png "Warp Example"
 [image5]: output_images/WarpedBinaryWithFit.png "Fit Visual"
 [image6]: output_images/ProjectedLaneResult.png "Output"
-[video1]: test_videos_output/project_video.mp4 "Video"
+[video1]: test_videos_output/ProjectVideoOutput_final.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -130,7 +130,7 @@ I implemented this step in lines 59 through 62 in the section titled "Pipeline" 
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./test_videos_output/project_video.mp4)
+Here's a [link to my video result](test_videos_output/ProjectVideoOutput_final.mp4)
 
 ---s
 
